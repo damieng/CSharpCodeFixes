@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CSharpCodeFixes</id>
+    <version>0.0.1.0</version>
+    <title>CSharpCodeFixes</title>
+    <authors>Damien Guard</authors>
+    <owners>Damien Guard</owners>
+    <licenseUrl>https://github.com/damieng/CSharpCodeFixes/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/damieng/CSharpCodeFixes</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A collection of Roslyn powered C# analyzers and code fixes.</description>
+    <copyright>Copyright 2015 Damien Guard.</copyright>
+    <tags>Roslyn, codefixes</tags>
+  </metadata>
+  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\dotnet and language specific analyzers in either analyzers\dotnet\cs or analyzers\dotnet\vb -->
+  <files>
+    <file src="*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="tools\*.ps1" target="tools\" />
+  </files>
+</package>
